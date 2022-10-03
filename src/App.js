@@ -1,16 +1,17 @@
 import './App.css';
 import React, { useState } from 'react';
 
+
 function WeatherApp() {
 
+  
   //const apiKey = '198deb9fcd7620b4432c749aa3e700da'
-  const [weatherData, setWeatherData] = useState([{}])
+  const [weatherData, setWeatherData] = useState({})
   const [city, setCity] = useState('')
-  const url='https://api.openweathermap.org/data/2.5/weather?q=Kuusamo&units=metric&appid=198deb9fcd7620b4432c749aa3e700da&lang'
 
   const getWeather = (event) => {
     if (event.key === 'Enter') {
-      fetch(url)
+      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=198deb9fcd7620b4432c749aa3e700da`)
       .then(response => response.json()
       ).then(data => {
           setWeatherData(data)
