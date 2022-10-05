@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 function WeatherApp() {
 
-<<<<<<< HEAD
+
   const iconUrl= 'http://openweathermap.org/img/wn/';
   const apiKey = 'apiKey here';
   const [weatherData, setWeatherData] = useState({});
@@ -15,17 +15,7 @@ function WeatherApp() {
       fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=`+apiKey)
       .then(response => response.json())
       .then(data => {
-=======
 
-  const [weatherData, setWeatherData] = useState({})
-  const [city, setCity] = useState('')
-
-  const getWeather = (event) => {
-    if (event.key === 'Enter') {
-      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid={API_KEY}lang=fi`)
-      .then(response => response.json()
-      ).then(data => {
->>>>>>> 667897217e62004323a8b58fa4847c1bb07a61bc
           setWeatherData(data)
           setIcon(iconUrl + data.weather[0].icon+'@2x.png')
           setCity('')
