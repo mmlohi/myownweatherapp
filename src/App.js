@@ -6,7 +6,7 @@ function WeatherApp() {
 
 
   const iconUrl= 'http://openweathermap.org/img/wn/';
-  const apiKey = 'apiKey here';
+  const apiKey = ' copy the api key here';
   const [weatherData, setWeatherData] = useState({});
   const [city, setCity] = useState('');
   const [icon, setIcon] = useState('');
