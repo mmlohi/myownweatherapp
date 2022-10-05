@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("/src/assets/clouds-1282314_960_720.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 code {
